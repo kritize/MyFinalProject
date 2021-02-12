@@ -1,0 +1,2 @@
+﻿--Select
+Select * from Customers
