@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{28ACFB77-45C1-4FF4-9F4E-FDFC68857038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameProject", "GameProject\GameProject.csproj", "{0B14A25C-9692-43FD-BD83-07D832B5FA56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameProject", "GameProject\GameProject.csproj", "{0B14A25C-9692-43FD-BD83-07D832B5FA56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{2C8F9262-3302-4EC7-A8AD-BA80F5D0869C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0B14A25C-9692-43FD-BD83-07D832B5FA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B14A25C-9692-43FD-BD83-07D832B5FA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B14A25C-9692-43FD-BD83-07D832B5FA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8F9262-3302-4EC7-A8AD-BA80F5D0869C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8F9262-3302-4EC7-A8AD-BA80F5D0869C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8F9262-3302-4EC7-A8AD-BA80F5D0869C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8F9262-3302-4EC7-A8AD-BA80F5D0869C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
