@@ -1,10 +1,12 @@
 ﻿using Business.Abstract;
+using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
 using FluentValidation;
@@ -17,20 +19,30 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
+        ILogger _logger;
+        private EfProductDal efProductDal;
 
-        public ProductManager(IProductDal productDal)
+        public ProductManager(EfProductDal efProductDal)
+        {
+            this.efProductDal = efProductDal;
+        }
+
+        public ProductManager(IProductDal productDal,ILogger logger)
         {
             _productDal = productDal;
+            _logger = logger;
         }
 
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            //business codes
-            //validation         
+                //business codes
+                //validation
            
-            _productDal.Add(product);
-            return new SuccessResult(Messages.ProductAdded);
+                _productDal.Add(product);
+
+                return new SuccessResult(Messages.ProductAdded);
+          
         }
 
         public IDataResult<List<Product>> GetAll()
