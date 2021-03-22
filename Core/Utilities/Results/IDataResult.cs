@@ -7,7 +7,7 @@ namespace Core.Utilities.Results
     public interface IDataResult<T>:IResult
     {
         T Data { get; }
-        bool Success { get; }
-        string Message { get; }
+        new bool Success { get; }
+        new string Message { get; }
     }
 }
